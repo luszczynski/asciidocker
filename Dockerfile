@@ -5,9 +5,9 @@ RUN mkdir /documents && chmod o+rw /documents
 VOLUME /documents
 WORKDIR /documents
 
-ENV REFRESHED_AT 04092015
+ENV REFRESHED_AT 15092015
 
-RUN dnf install -y ruby ruby-devel rubygems graphviz rubygem-nokogiri asciidoctor python-devel zlib-devel
+RUN dnf install -y tar make gcc ruby ruby-devel rubygems graphviz rubygem-nokogiri asciidoctor unzip findutils which wget python-devel zlib-devel
 
 RUN gem install --no-ri --no-rdoc asciidoctor-epub3 --version 1.0.0.alpha.2 && \
 	gem install --no-ri --no-rdoc asciidoctor-pdf --version 1.5.0.alpha.7 && \
